@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"github.com/klauspost/geoip-service/geoip2"
+	"github.com/linknext168/geoip-service/geoip2"
 	"github.com/pmylund/go-cache"
 	"log"
 	"net"
@@ -80,7 +80,7 @@ func main() {
 					if prettyL {
 						j, err = json.MarshalIndent(res, "", "  ")
 					} else {
-						j, err = res.MarshalJSON()
+						j, err = json.Marshal(res)
 					}
 				} else {
 					country, _ := result.(*geoip2.Country)
@@ -88,7 +88,7 @@ func main() {
 					if prettyL {
 						j, err = json.MarshalIndent(res, "", "  ")
 					} else {
-						j, err = res.MarshalJSON()
+						j, err = json.Marshal(res)
 					}
 				}
 				if err != nil {
