@@ -80,7 +80,7 @@ func main() {
 					if prettyL {
 						j, err = json.MarshalIndent(res, "", "  ")
 					} else {
-						j, err = res.MarshalJSON()
+						j, err = json.Marshal(res)
 					}
 				} else {
 					country, _ := result.(*geoip2.Country)
@@ -88,7 +88,7 @@ func main() {
 					if prettyL {
 						j, err = json.MarshalIndent(res, "", "  ")
 					} else {
-						j, err = res.MarshalJSON()
+						j, err = json.Marshal(res)
 					}
 				}
 				if err != nil {

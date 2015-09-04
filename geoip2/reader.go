@@ -30,9 +30,9 @@ type (
 		Names     map[string]string `maxminddb:"names"`
 	}
 	TheCountry struct {
-		GeoNameID uint              `maxminddb:"geoname_id"`
+		// GeoNameID uint              `maxminddb:"geoname_id"`
 		IsoCode   string            `maxminddb:"iso_code"`
-		Names     map[string]string `maxminddb:"names"`
+		// Names     map[string]string `maxminddb:"names"`
 	}
 	Location struct {
 		Latitude  float64 `maxminddb:"latitude"`
@@ -82,12 +82,12 @@ type City struct {
 // The Country structure corresponds to the data in the GeoIP2/GeoLite2
 // Country databases.
 type Country struct {
-	Continent          Continent          `maxminddb:"continent"`
+	// Continent          Continent          `maxminddb:"continent"`
 	Country            TheCountry         `maxminddb:"country"`
-	RegisteredCountry  RegisteredCountry  `maxminddb:"registered_country"`
-	RepresentedCountry RepresentedCountry `maxminddb:"represented_country"`
-	Subdivisions       []Subdivision      `maxminddb:"subdivisions"`
-	Traits             Traits             `maxminddb:"traits"`
+	// RegisteredCountry  RegisteredCountry  `maxminddb:"registered_country"`
+	// RepresentedCountry RepresentedCountry `maxminddb:"represented_country"`
+	// Subdivisions       []Subdivision      `maxminddb:"subdivisions"`
+	// Traits             Traits             `maxminddb:"traits"`
 }
 
 // The ConnectionType structure corresponds to the data in the GeoIP2
