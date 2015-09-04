@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
-	"github.com/charles-at-linknext/geoip-service/geoip2"
+	"github.com/linknext168/geoip-service/geoip2"
 	"github.com/pmylund/go-cache"
 	"log"
 	"net"
