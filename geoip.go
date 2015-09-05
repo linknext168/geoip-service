@@ -30,7 +30,7 @@ type ResponseCountry struct {
 func main() {
 	var dbName = flag.String("db", "GeoLite2-City.mmdb", "File name of MaxMind GeoIP2 and GeoLite2 database")
 	var lookup = flag.String("lookup", "city", "Specify which value to look up. Can be 'city' or 'country' depending on which database you load.")
-	var listen = flag.String("listen", ":5000", "Listen address and port, for instance 127.0.0.1:5000")
+	var listen = flag.String("listen", ":8002", "Listen address and port, for instance 127.0.0.1:8002")
 	var threads = flag.Int("threads", runtime.NumCPU(), "Number of threads to use. Defaults to number of detected cores")
 	var pretty = flag.Bool("pretty", false, "Should output be formatted with newlines and intentation")
 	var cacheSecs = flag.Int("cache", 0, "How many seconds should requests be cached. Set to 0 to disable")
